@@ -60,7 +60,7 @@ switch (dayNumberOfWeek) {
 //('A','B','C','D','E'):- Grades
 
 
-let score = 98;
+let score = 90;
 let grade;
 
 switch (true) {
@@ -84,6 +84,7 @@ switch (true) {
         grade = "E"
         console.log(`The student's acheived score is [${score}] and the grade is '${grade}' must be need for an improvement`);
         break;
+    default : console.log("Invalid Score");
 }
 
 
@@ -98,3 +99,4 @@ if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
 else {
       console.log(`The given year [${year}] is not a leap year`);  
 }
+// The given year [2024] is a leap year
