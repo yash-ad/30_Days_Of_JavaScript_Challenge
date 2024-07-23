@@ -63,6 +63,7 @@ switch (dayNumberOfWeek) {
 let score = 90;
 let grade;
 
+
 switch (true) {
     case (score >= 90 && score <= 100):
         grade = "A"
