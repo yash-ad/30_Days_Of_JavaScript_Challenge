@@ -38,3 +38,59 @@ console.log(`Book's Year is ${book.year}`);
 console.log(`Book-Summary:${book.getSummary()}`);
 
 console.log(`Book-Age:${book.getAge()}`);
+
+
+//2:Library object script:-
+//Create a script that defines a library object containing an array of book objects and log the library's details:_
+const library = {
+    name: "City-Library",
+    books: [
+        {
+            title: 'The Way of the Superior Man',
+            author: 'David Deida',
+            year: 1997,
+            //method for library's book detail
+            getDetails: function () {
+                return `"${this.title}" By ${this.author} and published year is ${this.year}`
+            }
+        },
+        {
+            title: 'The Last Breath',
+            author: 'Katrina Kittle',
+            year: 2006,
+            //method for library's book detail
+            getDetails: function () {
+                return `"${this.title}" By ${this.author} and published year is ${this.year}`
+            }
+        },
+        {
+            title: 'To Kill a Mockingbird',
+            author: 'Harper Lee',
+            year: 1960,
+            //method for library's book detail
+            getDetails: function () {
+                return `"${this.title}" By ${this.author} and published year is ${this.year}`
+            }
+        }
+    ]
+};
+
+library.books.forEach((book) => console.log(book.getDetails()));
+
+//3:Object iteration script:-
+//Write a script that demonstrates iterating over an object's properties using 'for...in' loop and 'Object.keys' / 'Object.values':-
+
+for (let prop in library) {
+    console.log(`Properties:${prop},Value:${library[prop]}`)
+};
+
+//Iterating over an array 'Books':-
+library.books.forEach((book,index) => {
+    console.log(`Book ${index + 1}`)
+
+    //Log all the keys of object.
+    console.log(`Keys:${Object.keys(book)}`);
+
+    //Log all the values of object.
+    console.log(`Values:${Object.values(book)}`);
+})
