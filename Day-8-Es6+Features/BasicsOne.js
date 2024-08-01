@@ -28,7 +28,7 @@ console.log(multiLineString);
 //Activity Two:-[Destructuring]:-
 //Task 3:Use array destructuring to extract the first and second elements from an array of numbers and log them to the console:-
 
-//So in this given here  we are declaring a variable called 'arrOfNums' with constant.
+//So in this given array, here  we are declaring a variable called 'arrOfNums' with constant.
 const arrOfNums = [1, 2, 3, 4, 5, 6];
 
 console.log(`An array of numbers ${arrOfNums}`);
