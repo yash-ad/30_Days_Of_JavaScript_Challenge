@@ -148,3 +148,106 @@ matrix.forEach((row) => console.log(row))
 console.log(matrix[0]);
 console.log(matrix[1]);
 console.log(matrix[2]);
+
+
+
+//What is forEach() method in javascript?
+//The forEach() method in javascript is used to execute a provided function once for each element in an array.and it does not returns a new array.
+ 
+//Lets take an example:-
+
+const arrOfNumsExample = [1, 2, 3, 4, 5, 6];
+
+//Iterate over once for each element in an array:-
+
+arrOfNumsExample.forEach((num) => {
+    const modifiedNum = num + 2;
+    
+    console.log(`arrOfNumsExample with using forEach()-Method with original array:${num} & modified array:${modifiedNum}`);
+  
+});
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//What is map() method in javascript or describe it:-
+//In javascript the map() method is a higher order function which is used to iterate over an array and perform some operations each element of the array.it creates a new array by applying a function to each element of the array.
+
+//Wha are the benefits of map() method or  function?
+//1.Map() returns a new array it does not modify the original array.
+//2.it is more concise and readable code.
+//3.Map returns a new array and it can be easily chained.
+
+//Lets take an example:-
+
+const arrOfNumsExampleTwo = [1, 2, 3, 4, 5];
+console.log(`Original array:arrOfNumsExampleTwo ${arrOfNumsExampleTwo}`);
+
+let modifiedArrMap = arrOfNumsExampleTwo.map((num) => num * 5);
+console.log(`Modified array:arrOfNumsExampleTwo ${modifiedArrMap}`);
+
+
+/////////////////////////////////////////////////
+                
+//What is filter() method in javascript?
+//The filter() method in javascript is a higher order function is used to work with arrays,
+//It creates a new array with all elements pass the test implemented by the provided callback function.
+//It is used for condition, if the callback functions return true for an element.
+
+//What are the benefits of a filter method?
+//Filter() filter method does not modify the original array , it returns a new array.
+//It is more concise and readable code.
+//The callback function is applied to each element of the array.
+
+//Lets take an example below:-
+
+
+const arrOfNumsExampleThree = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//Lets find out the odd numbers:-
+
+let oddNums = arrOfNumsExampleThree.filter((num) => num % 2 === 1);
+
+console.log(`Odd numbers : ${oddNums}`);//Odd numbers : 1,3,5,7,9.
+
+/////////////////////////////////////////////
+
+//What is a Reduce () method in javascript?
+//The reduce() method is a higher order function that is used to iterate over an array and accumulate a single value based on the elements,and it executes a reducer function on each element of the array.
+//It takes a callback function and an optional value as its arguments.
+
+//What are the benefits of a Reduce() method?
+//Reduce() method does not modify the original array.
+//It has more concise and more readable code.
+//Reduce() method returns a single value.
+
+
+//lets take an example below:-
+
+const arrOfNumsExampleFour = [10, 20, 30, 40, 50];
+
+const modifiedArrReduce = arrOfNumsExampleFour.reduce((acc,curr) => {
+   return acc + curr;
+},0)
+
+
+console.log(`modifiedArrReduce:${modifiedArrReduce}`); //150
+
+
+//Chaining:-
+
+let anArray = [1, 2, 3, 4, 5, 6];
+
+let multiplyNums = anArray
+    //Multiply with each num by 2.
+    .map((num) => num * 2)
+    //Keep only even numbers.
+    .filter((num) => num % 2 === 0)
+    //Sum up all the numbers.
+    .reduce((acc, curr) =>  acc + curr,0)
+
+
+console.log(multiplyNums); //42
+
+
+

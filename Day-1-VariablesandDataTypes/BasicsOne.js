@@ -69,7 +69,37 @@ console.log(myName); //Yash
 // console.log(a);
 // console.log(b);
 
+//1.What is TemporalDeadZone(TDZ) in js?
+//TDZ is a behavior in javascript.it occurs with variables declared using 'let' and 'const' keywords,
+//Its a behavior where we try to access variables before it is initialized that has not been declared yet.It throws a 'Reference' error.
+
+// console.log(a);
+// let a;//ReferenceError: Cannot access 'a' before initialization
+
+// console.log(b);
+// const b = 10; //ReferenceError: Cannot access 'b' before initialization
+
+// console.log(c);
+// var c = 20;//undefined
 
 
+ 
+
+//What are the primitive data types in javascript?
+//Primitive data types are the most basic data types in javascript,they are immutable that means they cannot be changed.
+//the value can be changed when by storing it in a new address in memory.
+//It holds a single value and it is always passed by value.
+//And stores into the stack.
+
+
+//What is an undefined in javascript?
+//Undefined in javascript its like a placeholder that means when the variable is declared but not assigned any value to the variable, its undefined.
+
+//What is undeclared?
+//Variables that are not declared or that do not exist in a program.
+
+
+//What is lexical environment or lexical scope?
+//Lexical environment is a data structure where it stores the variables and function in the current scope and all of the outer scopes and it is also known as the lexical scope or lexical closure.
 
 

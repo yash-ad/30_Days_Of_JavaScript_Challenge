@@ -1,5 +1,17 @@
 ////Functions:-
 
+//What is a functions in javascript:
+//Function is a first class citizens in javascript.
+//Functions are core concept of javascript.
+//Functions are objects,it can take other functions are arguments or returning by them.
+//It is a block of code that can be used through out the program.
+
+
+//Why do we store the the result in a variable that the function is something to return?
+//In javascript storing the result of a function call in a variable to reuse the value,making the code cleaner and for error handling as well.
+
+
+
 //Tasks/Activities:-
 
 ///Activity One:-[Function declaration]:-
@@ -219,3 +231,18 @@ const initialVal = 50;
 const resultFunc = applyFunctions(addNum, multiplyNum, initialVal);
 
 console.log(resultFunc);//300
+
+
+// The setTimeout() method is a web API provided by browsers.
+// It is used to schedule the execution of a function after a specified delay in milliseconds.
+// It takes two parameters:
+// 1. The callback function to be executed.
+// 2. The delay time in milliseconds.
+
+// Example:
+let morningGreeting = setTimeout(() => {
+    console.log("Good morning everyone");
+}, 2000);
+
+// The clearTimeout() method can be used to cancel the execution of a function scheduled by setTimeout.
+clearTimeout(morningGreeting);

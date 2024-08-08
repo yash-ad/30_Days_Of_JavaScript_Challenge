@@ -71,7 +71,7 @@ const arrTwo = [4, 5, 6];
 
 //Using spread operator:-
 //What is spread operator:-
-//Spread operator was introduced in ES6 version of javscript (2015).
+//Spread operator was introduced in ES6 version of javascript (2015).
 //Spread operator is used to spreading an array and object literals, the spread operator is used in function calls.
 const combineArrs = [...arrOne, ...arrTwo, 7, 8, 9];
 

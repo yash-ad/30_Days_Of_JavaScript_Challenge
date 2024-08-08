@@ -137,3 +137,14 @@ library.books.forEach((book, index) => {
     console.log('Values:',Object.values(book))
 
 })
+
+//In javascript how many different methods you can make an object?
+//In javascript there are several ways to declare or construct an object:-
+//1.Object
+//2.Using Class
+//3.using function
+//4.object literals
+//5.create method
+//6.object constructor.
+
+

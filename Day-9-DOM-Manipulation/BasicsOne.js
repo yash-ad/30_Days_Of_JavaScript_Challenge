@@ -145,3 +145,18 @@ hoverOverDiv.addEventListener('mouseover', () => {
 hoverOverDiv.addEventListener('mouseout', () => {
      hoverOverDiv.style.borderColor = "Black"  
 })
+
+
+//What is DOM?
+//DOM stands for 'Document object Model'.
+//Dom is a programming interface for html and xml.
+//when the browser tries to render an html document,
+//It creates an object called DOM,
+//with help of the Dom we can manipulate or change elements inside the html document.
+
+
+//What is the difference between the Document and Window in js?
+//Document:The document comes under the windows object and can be also considered as its property.
+
+//Window:Window in javascript is a global object that holds the structures like variables,functions,location and history.
+
