@@ -1,4 +1,131 @@
 //Day-11:Promises and Async-await:-
+//Tasks/Activities:-
+
+
+//Activity One:-[Understanding promises]:-
+//Task 1:-Create a promise that resolves with a message after a 2-second timeout and log the message to the console:-
+
+//Lets create a new promise obj:-
+let myPromiseOne = new Promise((resolve, reject) => {
+    //Simulate an asynchronous operation.
+    setTimeout(() => {
+        console.log("Hello i'm an asynchronous code! from task queue");
+        resolve("Data from the Promise,and I'm from microtask queue which is a high priority queue.")
+    }, 2000)
+})
+    .then((data) => {
+        console.log(`Data:${data}`);
+        return "Processed Data" //Return  the data to the next data handler.
+    })
+    .then((finalResult) => {
+        console.log(`finalResult:${finalResult}`)
+    })
+    .catch((error) => {
+      console.log(error.message);
+        
+    })
+
+//////////////////////////////////////////////////////////////////////
+    
+//Task 2:-Create a promise that rejects an error message after a 2-second timeout and handle the error using .catch():-
+//creating the promise:-
+let myPromiseTwo = new Promise((resolve, reject) => {
+    //For rejecting an error and delay with 2 seconds:-
+    setTimeout(() => {
+        reject(new Error("Something went wrong!!")); //Reject with an error message.
+    }, 2000)
+})
+.then(() => {
+    console.log("This won't be executed because the promise is rejected.");  
+    })
+.catch((error) => {
+    console.log(error.message);   
+})
+
+
+
+//Activity Two:-[Chaining promises]:-
+//Task 3:-Create a sequence of promises that simulate fetching data from a server.chain the promises to log messages in specific order:-
+
+//Simulate fetching data from a server:-
+
+
+//fetching data:-
+let fetchDataExample = fetch('https://jsonplaceholder.typicode.com/posts/1')
+    //The first '.then()' checks if a response is ok, if not not then throw an error ,otherwise it parses the response as JSON.
+    .then((response) => {
+        // console.log('R',response);
+        if (!response.ok) throw new Error("Network response is not ok");
+        return response.json(); //Parse the JSON data.
+    })
+    //Processing data:-
+    //The second '.then()' logs the fetched data and processed it by the creating a string with the data.title.
+    .then((data) => {
+        console.log(`Data fetched from server:${data}`);
+        return `Processed ${data.title}` //Process the data and pass it to the next promise.
+    })
+    //Saving data:-
+    //The third '.then()' logs the processed data and saving it:-
+    .then((processedData) => {
+        console.log(`Processing data:${processedData}`);
+        return `Saved ${processedData}`
+    })
+    //Final operations:-
+    //The fourth '.then()' logs a final message indicating the operation is completed.
+    .then((savedData) => {
+        console.log(`Operation completed with:${savedData}`);
+    
+    })
+    .catch((error) => {
+        console.log(`Error:${error.message}`);
+    
+    });
+
+
+////////////////////////////////////////////////////////////////////////////////
+//Activity Three:-[Using Async/Await]:-
+
+//Task 4:Write an async function that waits for a promise to resolve and then logs the resolved value:-
+
+//Define an async function
+async function fetchData() {
+    
+    //Create a promise that resolves with a value:-
+    const promise = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data has been fetched")
+        }, 2000)
+
+    });
+         //Await the promise to resolve and get the value:-
+        const result = await promise;
+
+        //Log the resolved value:-
+       console.log(`${result}`);
+
+};
+
+fetchData();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //1.What is promise?
 //Promise its an object representing an eventual completion or failure of an asynchronous operation.
@@ -37,27 +164,27 @@
 
 
 //Syntax below:
-let myPromise = new Promise((resolve,reject) => {
+// let myPromise = new Promise((resolve,reject) => {
     
-    setTimeout(() => {
-        console.log("Hello I'm ans asynchronous code");
-        resolve("Data from the promise");
+//     setTimeout(() => {
+//         console.log("Hello I'm ans asynchronous code");
+//         resolve("Data from the promise");
         
-    },2000) //Set a delay for 2 seconds
-})
-.then((data) => {
-    console.log(data);
-    return "Processed data" //Return the data to the next data handler.
+//     },2000) //Set a delay for 2 seconds
+// })
+// .then((data) => {
+//     console.log(data);
+//     return "Processed data" //Return the data to the next data handler.
     
-})
-.then((result) => {
-   console.log(result);
+// })
+// .then((result) => {
+//    console.log(result);
     
-})
-.catch((error) => {
-    console.log(error.message);
+// })
+// .catch((error) => {
+//     console.log(error.message);
     
-})
+// })
 
 //What is the return value of '.then()' and '.catch()'?
 //Both '.then()' and '.catch()' return a promise .
@@ -83,10 +210,10 @@ let myPromise = new Promise((resolve,reject) => {
 
 
 
+//What is fetch():-
+//Fetch is an inbuilt function in js , it a webAPI provided by the browser to us.
+//to make asynchronous HTTP requests to server.
+//Fetch() returns a promise.
 
 
-
-
-//Tasks/Activities:-
-//Activity One:-[Basic event handling]:-
 

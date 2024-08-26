@@ -35,6 +35,7 @@ btn.addEventListener('click', () => {
 let hoverEffect = document.getElementById('hoverEffect');
 
 hoverEffect.addEventListener('mouseover', () => {
+    alert("Hello-World")
     hoverEffect.style.backgroundColor = "gold";
 })
 
@@ -166,3 +167,53 @@ function addChildElement() {
 
 //Add an event listener to the button to add a child elements:-
 addChildButton.addEventListener('click', addChildElement)
+
+
+
+
+/////////////////////////////////////////////////////////
+
+//How event listeners work in js?
+//The event listener is a superpower given by the browser to javascript engine through the window or global object inform of webApi which is a DomAPI.
+//Event listener register to the callBack method.
+
+//Do js have classes?
+//Yes js does have classes were introduced in the version of Js ES6 2015.
+//Its important to note that js is prototype based language.
+
+//What is a 'new' keyword in js?
+// 'new' keyword it creates an empty object.it creates an instance.
+
+//////////////////////////////////////////////////////////////////
+
+//Events in js:-
+
+
+//What is an addEventListener:-
+//An addEventListener is a method it attaches an event handler to an element.
+
+
+//Pass an event object:-
+//In javascript event handling its common practice to pass an event object as a parameter to the event handler function.
+//This event object contains information about the event-occured.
+
+
+//What is an event propagation?
+//Event propagation refers to the way events are handled and processed as they occur in DOM hierarchy.
+
+
+//What is an event.preventDefault?
+//'Event.preventDefault()' is a method in javascript that prevents the default behavior of an event from occuring.
+//It usually use with the form , to submitting before.
+
+
+//What is an event bubbling?
+//Event bubbling is a one phase of event propagation in the DOM,when an event occurs on element it triggers from child to the parent element,from bottom to top DOM hierarchy.
+//By default its false
+
+//Event.stopPropagation()?
+//It is a method thats stops the propagation of an event through the DOM tree.
+
+
+//Event capturing is similar to the event bubbling where it triggers from parent to the child element.
+//from top to bottom

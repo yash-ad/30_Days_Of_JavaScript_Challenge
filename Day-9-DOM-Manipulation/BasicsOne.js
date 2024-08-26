@@ -47,6 +47,8 @@ document.body.appendChild(createDivEle);
 
 //Task 4:- create a new div 'li' element and add it to an existing 'ul' list:-
 //Create a new 'li' element:-
+//CreateElement() method creates an element to the node.
+//document.createElement()
 let createLiEle = document.createElement('li');
 
 // selected the 'ul' element by an ID:_
@@ -160,3 +162,19 @@ hoverOverDiv.addEventListener('mouseout', () => {
 
 //Window:Window in javascript is a global object that holds the structures like variables,functions,location and history.
 
+
+
+//What is window object?
+//Window is the main javascript object root,and it is also known 'global object' in the browser.it can be also treated as root of the document object model.
+
+//Document?
+//Document is the main object of the potentially visible document object model.
+
+//What is a webpage?
+//Web page is a document that can be either displayed on a browser window or as the html source.
+
+
+//setAttribute() method sets a new value to an attribute.
+
+//AppendChild():-
+//the append child() method appends a node element at the last child of an element.
